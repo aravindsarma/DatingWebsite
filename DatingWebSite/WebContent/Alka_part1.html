@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My First Assessment</title>
+	<meta name="author" content="alka">
+	<style>
+		fieldset {border: 5px solid yellow}
+	</style>
+
+</head>
+<body>
+<!--Missing:
+At the top	
+An appropriate large heading e.g. h1 or h2 or h3!-->
+	<form>
+	<!--Missing:
+ Although it is not an absolute requirement of this assessment task, 
+ it would be good if your form is sent to an appropriate server program after the submit button is selected. For this to work the data needs to be sent to a server using the post method with enctype="multipart/form-data". The destination program used in the instructional videos is 
+ http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php -->
+	<fieldset>
+		<legend>Your Face</legend>
+		<label name="yimg" >Your image:
+		<input type="button" name="chimg" value="Choose File">No File Chosen<br><!--Missing: [required] attribute-->
+		<label name="imgPrvw">Image Preview: <!--Missing: id="preview" attribute-->
+		
+	</fieldset>
+<fieldset>
+<legend>Your General Details</legend>
+
+<label name="myName">Name:
+<input type="text"name="name" ><br><!--Missing: [required] attribute-->
+<label name="Gndr" >Gender:
+
+<input type="radio" name="gender">Male<!--Missing: [required] attribute-->
+<input type="radio" name="gender">Female
+<br>
+
+<label name="Age" value="Age:18" >Age:18<br><!--Missing: [required] attribute-->
+
+<label name="DOB" >Date of Birth:
+<input type="text" name="dob" value="DD/MM/YYYY"><br><!--correction: type="date"-->
+
+<label name="clr" >Favorite color:
+<input type="color" name="favcolr">
+<br>
+
+<label name="cntry" >Which country? 
+<select name="country"><!--requirement as follows: select , with 6 option , to handle ‘no selection’ plus 5 different countries-->
+	<option value="Afghanistan">Afghanistan
+	<option value="India" selected>India
+	<option value="UK">UK
+	<option value="Nigeria">Nigeria
+</select>
+	
+</fieldset>
+<fieldset>
+	<legend>Your Indicators</legend>
+	<label  name="ht">Height:
+	<input type="range" min="0" max="100" value="50"><br><!--Missing: name="" -->
+	<label  name="sal">Salary:
+	<input type="range" min="0" max="100" value="50"><!--Missing: name="" -->
+</fieldset>
+
+<fieldset>
+	<legend>Your Contact Information</legend>
+	<label  name="email">Email:<!--Missing: [required] attribute-->
+	<input type="text" name="mailid"><br>
+	<label  name="mob">Mobile:
+	<input type="text" name="mobid"><br><!--correction: type="tel"-->
+	<label  name="addr">Address:<br>
+	<textarea name="addrval" rows="5" cols="30">
+	</textarea><br>
+
+	<label  name="meth">Method to contact you:
+	<input type="checkbox" name="methcontct" value="Email">Email
+	<input type="checkbox" name="methcontct" value="Whatsapp">Whatsapp
+	<input type="checkbox" name="methcontct" value="In-app chat">In-app Chat
+	
+</fieldset>
+<input type="submit" name="submit" value="submit">
+</form>
+</body>
+</html>
+<!-- 
+The label-input requirement is a follows:
+	For everything in the form except the submit button, there must be an appropriate label which has an appropriate 
+	for e.g.
+		<label for="avatar">Your image:</label>
+		<input type="file" id="avatar" name="avatar" required>
+
+all your label elements miss </label> and there is no for="" for any of the labels.
+-->
